@@ -26,6 +26,4 @@ RUN npm install -g firebase-tools --unsafe-perm
 # install git and imagemagick
 RUN apk add --no-cache git imagemagick
 
-RUN env
-
-RUN hugo version
+RUN ls -l /usr/bin
