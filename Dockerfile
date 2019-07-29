@@ -12,7 +12,7 @@ RUN set -x && \
   # make sure we have up-to-date certificates
   update-ca-certificates && \
   cd /tmp &&\
-  wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz -O hugo.tar.gz && \
+  wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz -O hugo.tar.gz && \
   tar xzf hugo.tar.gz && \
   mv ./hugo /usr/bin/hugo && \
   rm -r * && \
@@ -24,5 +24,5 @@ RUN set -x && \
 RUN npm install -g firebase-tools --unsafe-perm
 
 # install git and imagemagick
-RUN apk add --no-cache git imagemagick
+RUN apk add --no-cache git
 
