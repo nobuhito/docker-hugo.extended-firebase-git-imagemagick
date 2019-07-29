@@ -14,7 +14,7 @@ RUN set -x && \
   cd /tmp &&\
   wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz -O hugo.tar.gz && \
   tar xzf hugo.tar.gz && \
-  mv hugo /usr/bin/hugo && \
+  mv ./hugo /usr/bin/hugo && \
   rm -r * && \
   # don't delete ca-certificates pacakge here since it remove all certs too
   apk del wget
@@ -25,3 +25,5 @@ RUN npm install -g firebase-tools --unsafe-perm
 
 # install git and imagemagick
 RUN apk add --no-cache git imagemagick
+
+RUN hugo version
