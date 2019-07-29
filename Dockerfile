@@ -17,7 +17,7 @@ RUN set -x && \
   mv ./hugo /usr/bin/hugo && \
   rm -r * && \
   # don't delete ca-certificates pacakge here since it remove all certs too
-  apk del wget findutils
+  apk del wget
 
 # install firebase-cli
 # use --unsafe-perm to solve the issue: https://github.com/firebase/firebase-tools/issues/372
